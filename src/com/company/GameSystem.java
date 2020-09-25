@@ -30,4 +30,8 @@ public class GameSystem {
         return new Shop(listOfAmulets, listOfHelms, listOfWeapons);
     }
 
+    public static Player initGame(String username){
+        return new Player(username);
+    }
+
 }

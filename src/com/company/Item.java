@@ -10,6 +10,9 @@ public class Item {
         this.cost = cost;
     }
 
+    public Item() {
+    }
+
     public String getName() {
         return name;
     }

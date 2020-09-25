@@ -16,7 +16,7 @@ public class Player {
         this.minDamage = 1;
         this.maxDamage = 2;
         this.health = 100;
-        this.gold = 0;
+        this.gold = 500;
         this.armor = 0;
         this.magicPower = 0;
         this.strength = 0;
@@ -76,5 +76,19 @@ public class Player {
 
     public void setStrength(int strength) {
         this.strength = strength;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", minDamage=" + minDamage +
+                ", maxDamage=" + maxDamage +
+                ", health=" + health +
+                ", gold=" + gold +
+                ", armor=" + armor +
+                ", magicPower=" + magicPower +
+                ", strength=" + strength +
+                '}';
     }
 }
