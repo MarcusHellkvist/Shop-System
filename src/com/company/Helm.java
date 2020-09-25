@@ -6,6 +6,7 @@ public class Helm extends Item {
     private static int idCounter = 1;
     private int armor;
 
+
     public Helm(String name, int cost, int armor) {
         super(name, cost);
         this.id = idCounter;

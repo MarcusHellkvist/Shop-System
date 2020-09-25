@@ -68,29 +68,10 @@ public class Shop {
         int playerGold = player.getGold();
 
         if (playerGold >= itemCost){
-            buyItem(item, player);
-            player.setGold(playerGold - itemCost);
+            player.equipItem(item);
+
         } else {
             System.out.println("You can't afford that right now!");
         }
-
-
-    }
-
-    private void buyItem(Item item, Player player) {
-
-        if (item instanceof Weapon){
-            Weapon weapon = (Weapon) item;
-            player.setStrength(player.getStrength() + weapon.getStrength());
-        } else if (item instanceof Helm){
-            Helm helm = (Helm) item;
-            player.setArmor(player.getArmor() + helm.getArmor());
-        } else if (item instanceof Amulet){
-            Amulet amulet = (Amulet) item;
-            player.setMagicPower(player.getMagicPower() + amulet.getMagicPower());
-        }
-
-        System.out.println("Can you feel your new powers?");
-
     }
 }

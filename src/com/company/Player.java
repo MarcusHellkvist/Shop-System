@@ -78,6 +78,29 @@ public class Player {
         this.strength = strength;
     }
 
+    public void equipItem(Item item){
+
+        //Inventory inventory = new Inventory();
+
+        if (item instanceof Weapon){
+            Weapon weapon = (Weapon) item;
+            setStrength(strength +weapon.getStrength());
+            //inventory.setWeapon(weapon);
+
+        } else if (item instanceof Helm){
+            Helm helm = (Helm) item;
+            setArmor(armor + helm.getArmor());
+        } else if (item instanceof Amulet){
+            Amulet amulet = (Amulet) item;
+            setMagicPower(magicPower + amulet.getMagicPower());
+        }
+
+        setGold(gold - item.getCost());
+        System.out.println("Can you feel your new powers?");
+    }
+
+
+
     @Override
     public String toString() {
         return "Player{" +
@@ -91,4 +114,5 @@ public class Player {
                 ", strength=" + strength +
                 '}';
     }
+
 }
